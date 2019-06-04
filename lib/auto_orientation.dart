@@ -40,4 +40,12 @@ class AutoOrientation {
       return;
     }
   }
+
+  static sensor() async {
+    try {
+      await _channel.invokeMethod('sensor');
+    } on MissingPluginException catch (_) {
+      return;
+    }
+  }
 }

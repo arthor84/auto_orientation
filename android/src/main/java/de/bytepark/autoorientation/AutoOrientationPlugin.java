@@ -37,12 +37,14 @@ public class AutoOrientationPlugin implements MethodCallHandler {
       case "setPortraitDown":
         this.activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_REVERSE_PORTRAIT);
         break;
+      case "sensor":
+        this.activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR);
+        break;
       default:
         result.notImplemented();
         break;
     }
 
-    this.activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
 
   }
 }

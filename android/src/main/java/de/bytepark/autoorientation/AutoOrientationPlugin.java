@@ -45,6 +45,8 @@ public class AutoOrientationPlugin implements MethodCallHandler {
         break;
     }
 
+    this.activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
+
 
   }
 }
